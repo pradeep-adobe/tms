@@ -1,0 +1,326 @@
+<html>
+<head>
+<title>Consolidated Template-Block List & Optimization Insights - Thermo Fisher AEM-to-EDS Migration</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; }
+h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+h2 { color: #333; margin-top: 40px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+h3 { color: #555; margin-top: 20px; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; vertical-align: top; font-size: 0.9em; }
+th { background: #0066cc; color: white; }
+tr:nth-child(even) { background: #f8f9fa; }
+a { color: #0066cc; }
+p.meta { color: #666; }
+.insight-box { border-radius: 8px; padding: 16px; margin: 16px 0; }
+.insight-green { background: #d4edda; border: 1px solid #c3e6cb; }
+.insight-yellow { background: #fff3cd; border: 1px solid #ffc107; }
+.insight-red { background: #f8d7da; border: 1px solid #f5c6cb; }
+.insight-blue { background: #cce5ff; border: 1px solid #b8daff; }
+.check { color: #28a745; font-weight: bold; }
+.cross { color: #dc3545; }
+.count-badge { display: inline-block; background: #0066cc; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.85em; min-width: 20px; text-align: center; }
+</style>
+</head>
+<body>
+<h1>Consolidated Template-Block List & Optimization Insights</h1>
+<p class="meta"><b>Site:</b> thermofisher.com | <b>Date:</b> 2026-03-20 | <b>Templates:</b> 21 | <b>Blocks:</b> 35 | <b>Variations:</b> 87 | <b>Total URLs:</b> 81,753</p>
+
+<!-- PART 1: CONSOLIDATED LIST -->
+<h2>Part 1: Consolidated Template → Block List</h2>
+<p>Clean list showing which block variations are used per template. Sorted by page count (highest impact first).</p>
+
+<table>
+<tr><th>Template</th><th>Pages</th><th>Block Name</th><th>Block Variations Used</th></tr>
+<!-- T05: Form -->
+<tr><td rowspan="3"><b>T05: Form Page</b></td><td rowspan="3">18,521</td><td>hero</td><td>V1: Standard, V5: Thinbanner</td></tr>
+<tr><td>form</td><td>V1: Modern Pragma, V2: Legacy Eloqua</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<!-- T03: Deep -->
+<tr><td rowspan="12"><b>T03: Category Deep</b></td><td rowspan="12">16,758</td><td>hero</td><td>V1: Standard, V5: Thinbanner</td></tr>
+<tr><td>sidebar-nav</td><td>V1: Auto-nav, V2: Manual</td></tr>
+<tr><td>cards</td><td>V1: 3-up, V2: 4-up, V6: Product showcase</td></tr>
+<tr><td>columns</td><td>V1: 50/50, V4: Legacy 2-col, V5: 3-col, V6: Asymmetric</td></tr>
+<tr><td>video</td><td>V1: Brightcove legacy</td></tr>
+<tr><td>embed</td><td>V1: LTRawHTML</td></tr>
+<tr><td>table</td><td>V1: Spec, V2: Striped RTE</td></tr>
+<tr><td>form</td><td>V3: XF form, V4: Inline request</td></tr>
+<tr><td>mondrian</td><td>V2: Module-f, V3: Group, V4: Featured-list</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar, V5: Dark gradient</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light, V3: Gray-lighter, V5: Mini, V6: BG image, V7: Heading well</td></tr>
+<tr><td>resources-grid</td><td>V1: 4-up footer</td></tr>
+<!-- T06: Promo -->
+<tr><td rowspan="5"><b>T06: Promotion</b></td><td rowspan="5">13,813</td><td>hero</td><td>V1: Standard, V3: Gradient</td></tr>
+<tr><td>cards</td><td>V9: Promo with badge</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar, V2: Full-width, V4: Mid-page</td></tr>
+<tr><td>columns</td><td>V1: 50/50</td></tr>
+<tr><td>form</td><td>V1: Modern Pragma</td></tr>
+<!-- T07: Tech Resources -->
+<tr><td rowspan="5"><b>T07: Tech Resources</b></td><td rowspan="5">6,871</td><td>hero</td><td>V1: Standard</td></tr>
+<tr><td>cards</td><td>V10: Tech reference</td></tr>
+<tr><td>anchor-nav</td><td>V1: cmp-anchorlist TOC</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T15: PAS -->
+<tr><td rowspan="8"><b>T15: PAS/Services</b></td><td rowspan="8">6,676</td><td>hero</td><td>V1: Standard, V5: Thinbanner</td></tr>
+<tr><td>accordion</td><td>V1: Modern, V2: Bootstrap</td></tr>
+<tr><td>anchor-nav</td><td>V1: cmp-anchorlist TOC</td></tr>
+<tr><td>video-teaser</td><td>V1: Thumbnail + play</td></tr>
+<tr><td>video-modal</td><td>V1: Modal overlay</td></tr>
+<tr><td>cards</td><td>V1: 3-up</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T08: Events -->
+<tr><td rowspan="5"><b>T08: Events</b></td><td rowspan="5">4,873</td><td>hero</td><td>V1: Standard</td></tr>
+<tr><td>event-table</td><td>V1: Filterable event list</td></tr>
+<tr><td>cards</td><td>V7: Legacy 4-col</td></tr>
+<tr><td>form</td><td>V1: Modern Pragma</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<!-- T10: Corporate -->
+<tr><td rowspan="8"><b>T10: Corporate About</b></td><td rowspan="8">1,906</td><td>hero</td><td>V1: Standard, V7: Corporate</td></tr>
+<tr><td>carousel</td><td>V1: Hero slider</td></tr>
+<tr><td>highlights</td><td>V1: Stats/numbers</td></tr>
+<tr><td>quote</td><td>V1: CEO letter, V2: Testimonial</td></tr>
+<tr><td>csr-pillars</td><td>V1: Corporate pillars</td></tr>
+<tr><td>pipeline</td><td>V1: Drug dev phases</td></tr>
+<tr><td>columns</td><td>V1: 50/50, V4: Legacy 2-col</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<!-- T09: Brand -->
+<tr><td rowspan="6"><b>T09: Brand Page</b></td><td rowspan="6">1,795</td><td>hero</td><td>V5: Thinbanner</td></tr>
+<tr><td>sidebar-nav</td><td>V1: Auto-nav, V2: Manual</td></tr>
+<tr><td>cards</td><td>V5: Text-only, V6: Product showcase</td></tr>
+<tr><td>columns</td><td>V4: Legacy 2-col, V5: Legacy 3-col</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar, V4: Mid-page</td></tr>
+<tr><td>section-metadata</td><td>V1: White, V2: Blue-light, V3: Gray-lighter</td></tr>
+<!-- T11: Protocol -->
+<tr><td rowspan="6"><b>T11: Protocol</b></td><td rowspan="6">1,730</td><td>hero</td><td>V5: Thinbanner</td></tr>
+<tr><td>anchor-nav</td><td>V3: Pipe-separated links</td></tr>
+<tr><td>sidebar-nav</td><td>V2: Manual left-nav</td></tr>
+<tr><td>resources-list</td><td>V1: Title + description links</td></tr>
+<tr><td>table</td><td>V2: Striped RTE</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light, V3: Gray-lighter</td></tr>
+<!-- T02: L2 -->
+<tr><td rowspan="7"><b>T02: Category L2</b></td><td rowspan="7">1,698</td><td>hero</td><td>V1: Standard, V4: With CTA</td></tr>
+<tr><td>cards</td><td>V1: 3-up, V2: 4-up, V8: Icon props</td></tr>
+<tr><td>columns</td><td>V1: 50/50, V2: Image-left, V3: 75/25</td></tr>
+<tr><td>sidebar-nav</td><td>V1: Auto-nav</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar, V4: Mid-page</td></tr>
+<tr><td>resources-grid</td><td>V1: 4-up footer</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T04: Product -->
+<tr><td rowspan="10"><b>T04: Product Detail</b></td><td rowspan="10">807</td><td>hero</td><td>V2: Foreground product image</td></tr>
+<tr><td>product-sub-nav</td><td>V1: Sticky product nav</td></tr>
+<tr><td>sidebar-nav</td><td>V1: Auto-nav</td></tr>
+<tr><td>columns</td><td>V3: 75/25 asymmetric</td></tr>
+<tr><td>video</td><td>V2: Video teaser card</td></tr>
+<tr><td>table</td><td>V1: Spec table</td></tr>
+<tr><td>embed</td><td>V1: LTRawHTML</td></tr>
+<tr><td>download-card</td><td>V1: Resource download</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T14: Blog -->
+<tr><td rowspan="6"><b>T14: Blog/Editorial</b></td><td rowspan="6">789</td><td>hero</td><td>V5: Thinbanner</td></tr>
+<tr><td>carousel</td><td>V2: Filmstrip magazine</td></tr>
+<tr><td>blog-cards</td><td>V1: WP grid, V2: Post-list</td></tr>
+<tr><td>social-share</td><td>V1: Inline icons</td></tr>
+<tr><td>columns</td><td>V4: Legacy 2-col</td></tr>
+<tr><td>section-metadata</td><td>V3: Gray-lighter</td></tr>
+<!-- T12: Handbook -->
+<tr><td rowspan="8"><b>T12: Handbook</b></td><td rowspan="8">455</td><td>hero</td><td>V5: Thinbanner</td></tr>
+<tr><td>chapter-toc</td><td>V1: Handbook chapter nav</td></tr>
+<tr><td>handbook-search</td><td>V1: Inline search box</td></tr>
+<tr><td>sidebar-nav</td><td>V3: Chapter sidebar</td></tr>
+<tr><td>video</td><td>V1: Brightcove, V4: Playlist</td></tr>
+<tr><td>video-playlist</td><td>V1: Playlist</td></tr>
+<tr><td>cards</td><td>V11: Icon cards (decorative)</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light, V6: BG image</td></tr>
+<!-- T16: Vertical -->
+<tr><td rowspan="7"><b>T16: Industry Vertical</b></td><td rowspan="7">414</td><td>hero</td><td>V1: Standard, V3: Gradient</td></tr>
+<tr><td>sidebar-nav</td><td>V1: Auto-nav</td></tr>
+<tr><td>video</td><td>V3: Modern Brightcove</td></tr>
+<tr><td>product-sub-nav</td><td>V2: Manual/auto dropdown</td></tr>
+<tr><td>cards</td><td>V1: 3-up, V2: 4-up</td></tr>
+<tr><td>columns</td><td>V1: 50/50</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T13: Support -->
+<tr><td rowspan="7"><b>T13: Support Hub</b></td><td rowspan="7">310</td><td>hero</td><td>V1: Standard</td></tr>
+<tr><td>support-hub</td><td>V1: Categorized links</td></tr>
+<tr><td>quick-menu</td><td>V1: Quick-links</td></tr>
+<tr><td>accordion</td><td>V1: Modern</td></tr>
+<tr><td>anchor-nav</td><td>V1: cmp-anchorlist</td></tr>
+<tr><td>teaser</td><td>V1: Promo bar</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T21: Chemicals -->
+<tr><td rowspan="4"><b>T21: Chemicals</b></td><td rowspan="4">230</td><td>hero</td><td>V5: Thinbanner</td></tr>
+<tr><td>sidebar-nav</td><td>V2: Manual</td></tr>
+<tr><td>columns</td><td>V4: Legacy 2-col, V5: Legacy 3-col</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light, V3: Gray-lighter</td></tr>
+<!-- T01: L1 -->
+<tr><td rowspan="6"><b>T01: Category L1</b></td><td rowspan="6">216</td><td>hero</td><td>V1: Standard, V3: Gradient, V4: With CTA</td></tr>
+<tr><td>cards</td><td>V1: 3-up, V2: 4-up, V3: 2-up, V8: Icon props</td></tr>
+<tr><td>columns</td><td>V1: 50/50, V2: Image-left</td></tr>
+<tr><td>teaser</td><td>V1: Header promo bar</td></tr>
+<tr><td>resources-grid</td><td>V1: 4-up footer</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T18: Clinical -->
+<tr><td rowspan="8"><b>T18: Clinical Hub</b></td><td rowspan="8">147</td><td>hero</td><td>V5: Thinbanner, V6: Mondrian</td></tr>
+<tr><td>mondrian</td><td>V1: Feature promo</td></tr>
+<tr><td>quick-menu</td><td>V1: Quick-links</td></tr>
+<tr><td>teaser</td><td>V2: Full-width, V3: Split, V5: Gradient</td></tr>
+<tr><td>cards</td><td>V1: 3-up, V7: Legacy 4-col</td></tr>
+<tr><td>columns</td><td>V4: 2-col, V5: 3-col, V6: Asymmetric</td></tr>
+<tr><td>form</td><td>V3: Experience Fragment</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light, V3: Gray-lighter</td></tr>
+<!-- T17: Digital -->
+<tr><td rowspan="6"><b>T17: Digital Solutions</b></td><td rowspan="6">96</td><td>hero</td><td>V3: Gradient</td></tr>
+<tr><td>tabs</td><td>V3: Workflow tabs</td></tr>
+<tr><td>accordion</td><td>V2: Legacy Bootstrap</td></tr>
+<tr><td>columns</td><td>V7: Bordered 4-col</td></tr>
+<tr><td>workflow-stepper</td><td>V1: Multi-step</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+<!-- T20: B2B -->
+<tr><td rowspan="5"><b>T20: B2B</b></td><td rowspan="5">69</td><td>hero</td><td>V6: Mondrian hero</td></tr>
+<tr><td>mondrian</td><td>V1: Feature, V2: Module-f</td></tr>
+<tr><td>cards</td><td>V7: Legacy 4-col</td></tr>
+<tr><td>columns</td><td>V4: Legacy 2-col</td></tr>
+<tr><td>section-metadata</td><td>V2: Blue-light</td></tr>
+<!-- T19: Order -->
+<tr><td rowspan="4"><b>T19: Order Hub</b></td><td rowspan="4">64</td><td>hero</td><td>V1: Standard</td></tr>
+<tr><td>anchor-nav</td><td>V1: cmp-anchorlist</td></tr>
+<tr><td>accordion</td><td>V1: Modern</td></tr>
+<tr><td>section-metadata</td><td>V8: Modern container</td></tr>
+</table>
+
+<!-- PART 2: INSIGHTS & OPTIMIZATION -->
+<h2>Part 2: Insights & Optimization Opportunities</h2>
+
+<h3>2.1 Common Blocks Across Templates</h3>
+<div class="insight-blue">
+<p>These blocks appear across the most templates — highest reuse value and development priority:</p>
+</div>
+<table>
+<tr><th>Block</th><th>Templates Using It</th><th>Count</th><th>Impact Assessment</th></tr>
+<tr><td><b>hero</b></td><td>ALL templates</td><td><span class="count-badge">21</span></td><td>Universal — develop first. 7 variations but SPLIT into 3 EDS blocks covers all templates.</td></tr>
+<tr><td><b>section-metadata</b></td><td>T01-T04, T07, T09, T11-T21</td><td><span class="count-badge">17</span></td><td>CSS-only — low effort, high impact. 8 variations are all background/spacing changes.</td></tr>
+<tr><td><b>teaser</b></td><td>T01-T10, T13, T15, T18</td><td><span class="count-badge">13</span></td><td>Header promo bar (V1) is global. Other variants limited to specific templates.</td></tr>
+<tr><td><b>cards</b></td><td>T01-T04, T06-T09, T12, T14-T16, T18, T20</td><td><span class="count-badge">14</span></td><td>Most versatile block — 11 variations but CONSOLIDATE into single block with CSS classes.</td></tr>
+<tr><td><b>columns</b></td><td>T01-T04, T06, T09, T10, T14, T16-T18, T20, T21</td><td><span class="count-badge">13</span></td><td>Core layout — 7 variations map to responsive CSS grid. CONSOLIDATE into one block.</td></tr>
+<tr><td><b>sidebar-nav</b></td><td>T02-T04, T09, T11, T12, T16, T21</td><td><span class="count-badge">8</span></td><td>Navigation — 3 variations can share core JS with CSS variants.</td></tr>
+<tr><td><b>form</b></td><td>T03, T05, T06, T08, T18</td><td><span class="count-badge">5</span></td><td>Complex — SPLIT into form (standard) + form-complex (Eloqua) to manage complexity.</td></tr>
+<tr><td><b>anchor-nav</b></td><td>T07, T11, T13, T15, T19</td><td><span class="count-badge">5</span></td><td>Simple CSS-only jump navigation — low effort, high reuse.</td></tr>
+<tr><td><b>accordion</b></td><td>T13, T15, T17, T19</td><td><span class="count-badge">4</span></td><td>2 variations — Modern + Bootstrap can share core expand/collapse JS.</td></tr>
+</table>
+
+<h3>2.2 Template-Specific Blocks</h3>
+<div class="insight-yellow">
+<p>These blocks are unique to 1-2 templates — lower reuse but critical for those specific page types:</p>
+</div>
+<table>
+<tr><th>Block</th><th>Template(s)</th><th>Pages Affected</th><th>Recommendation</th></tr>
+<tr><td><b>event-table</b></td><td>T08: Events only</td><td>4,873</td><td>Complex standalone. Required for events hub. Heavy JS (filters, search, pagination).</td></tr>
+<tr><td><b>chapter-toc</b></td><td>T12: Handbook only</td><td>455</td><td>Medium standalone. Only handbook pages — consider if worth migrating vs. rebuilding.</td></tr>
+<tr><td><b>handbook-search</b></td><td>T12: Handbook only</td><td>455</td><td>Medium standalone. Depends on backend search API — verify API availability in EDS.</td></tr>
+<tr><td><b>video-playlist</b></td><td>T12: Handbook only</td><td>455</td><td>Medium standalone. Brightcove playlist integration — verify player API.</td></tr>
+<tr><td><b>support-hub</b></td><td>T13: Support only</td><td>310</td><td>Medium standalone. Chat widget integration requires 3rd-party dependency.</td></tr>
+<tr><td><b>workflow-stepper</b></td><td>T17: Digital Solutions only</td><td>96</td><td>Complex standalone. Only 96 pages — <b>candidate for deferral</b> to Phase 2.</td></tr>
+<tr><td><b>highlights</b></td><td>T10: Corporate only</td><td>~500</td><td>Medium standalone. Counter animation — keep for corporate brand pages.</td></tr>
+<tr><td><b>csr-pillars</b></td><td>T10: Corporate only</td><td>~500</td><td>Medium standalone. Could merge with cards (icon variant) — but brand-specific.</td></tr>
+<tr><td><b>pipeline</b></td><td>T10: Corporate only</td><td>~500</td><td>Medium standalone. Drug dev phases — unique to pharma/corporate.</td></tr>
+<tr><td><b>video-teaser</b></td><td>T15: PAS only</td><td>~50</td><td>Medium standalone. Only supply center — <b>candidate for deferral</b>.</td></tr>
+<tr><td><b>video-modal</b></td><td>T15: PAS only</td><td>~50</td><td>Medium standalone. Companion to video-teaser — defer together.</td></tr>
+<tr><td><b>blog-cards</b></td><td>T14: Blog only</td><td>789</td><td>Medium. Could merge with cards block as a variant.</td></tr>
+<tr><td><b>carousel</b></td><td>T10: Corporate, T14: Blog</td><td>~2,700</td><td>Complex — 2 very different variants. Hero slider vs filmstrip. Keep separate.</td></tr>
+<tr><td><b>mondrian</b></td><td>T03, T18, T20</td><td>~17,000</td><td>Complex CSS grid. High page count in T03 makes this critical despite complexity.</td></tr>
+</table>
+
+<h3>2.3 Template Standardization Opportunities</h3>
+<div class="insight-green">
+<p><b>Key opportunities to reduce the number of unique templates needed in EDS:</b></p>
+</div>
+
+<table>
+<tr><th>#</th><th>Opportunity</th><th>Templates Affected</th><th>Impact</th><th>Recommendation</th></tr>
+<tr><td>1</td><td><b>Merge L1 + L2 Category templates</b></td><td>T01 + T02</td><td>1,914 pages</td><td>Both use hero + cards + columns + resources-grid. T02 adds sidebar as optional. <b>Merge into single "Category" EDS template</b> with optional sidebar toggle.</td></tr>
+<tr><td>2</td><td><b>Standardize Form Pages</b></td><td>T05</td><td>18,521 pages</td><td>Pragma and Eloqua forms share the same template structure — only form block varies. <b>Use single EDS template</b> with form block variant selection.</td></tr>
+<tr><td>3</td><td><b>Merge Promo + Campaign</b></td><td>T06</td><td>13,813 pages</td><td>Standard promo and campaign landing share hero + cards + teaser. <b>Single EDS template</b> with optional form block.</td></tr>
+<tr><td>4</td><td><b>Merge Brand + Chemicals</b></td><td>T09 + T21</td><td>2,025 pages</td><td>Both use thinbanner + sidebar + legacy columns + wells. <b>Single "Legacy Content" EDS template</b>.</td></tr>
+<tr><td>5</td><td><b>Merge Tech Resources + Event Details</b></td><td>T07b + T08b</td><td>~11,500 pages</td><td>Event detail and resource detail pages share same structure: hero + content body. <b>Single "Article" EDS template</b>.</td></tr>
+<tr><td>6</td><td><b>Create "Hub" super-template</b></td><td>T07a, T08a, T13a, T15a, T19a</td><td>~2,600 pages</td><td>All hub pages share: hero + anchor-nav + accordion + cards. <b>Single "Hub" EDS template</b> with block composition.</td></tr>
+</table>
+
+<h3>2.4 Recommended EDS Template Reduction</h3>
+<div class="insight-blue">
+<p>By applying the standardization opportunities above, <b>21 AEM templates → ~12 EDS templates</b>:</p>
+</div>
+
+<table>
+<tr><th>#</th><th>EDS Template Name</th><th>Maps From</th><th>Est. Pages</th><th>Key Blocks</th></tr>
+<tr><td>1</td><td><b>category</b></td><td>T01 + T02 + T16</td><td>2,328</td><td>hero, cards, columns, sidebar-nav (optional), resources-grid</td></tr>
+<tr><td>2</td><td><b>category-deep</b></td><td>T03</td><td>16,758</td><td>hero, sidebar-nav, cards, columns, video, mondrian, section-metadata</td></tr>
+<tr><td>3</td><td><b>product-detail</b></td><td>T04</td><td>807</td><td>hero (foreground), product-sub-nav, sidebar-nav, table, download-card</td></tr>
+<tr><td>4</td><td><b>form</b></td><td>T05</td><td>18,521</td><td>hero, form</td></tr>
+<tr><td>5</td><td><b>promotion</b></td><td>T06</td><td>13,813</td><td>hero, cards (promo), teaser, form (optional)</td></tr>
+<tr><td>6</td><td><b>article</b></td><td>T07b + T08b + T15c</td><td>~15,800</td><td>hero, content body, related resources</td></tr>
+<tr><td>7</td><td><b>hub</b></td><td>T07a + T08a + T13 + T15a + T19</td><td>~2,700</td><td>hero, anchor-nav, accordion, event-table/cards, support-hub</td></tr>
+<tr><td>8</td><td><b>brand</b></td><td>T09 + T21</td><td>2,025</td><td>hero (thinbanner), sidebar-nav, cards, columns, section-metadata</td></tr>
+<tr><td>9</td><td><b>corporate</b></td><td>T10</td><td>1,906</td><td>hero (corporate), carousel, highlights, quote, csr-pillars</td></tr>
+<tr><td>10</td><td><b>reference</b></td><td>T11 + T12</td><td>2,185</td><td>hero, chapter-toc, sidebar-nav, anchor-nav, handbook-search</td></tr>
+<tr><td>11</td><td><b>blog</b></td><td>T14</td><td>789</td><td>hero, carousel, blog-cards, social-share</td></tr>
+<tr><td>12</td><td><b>specialty</b></td><td>T17 + T18 + T20</td><td>312</td><td>hero, mondrian, tabs, workflow-stepper, quick-menu</td></tr>
+</table>
+
+<h3>2.5 Development Priority Matrix</h3>
+<div class="insight-red">
+<p><b>Block development priority based on template coverage × page count:</b></p>
+</div>
+
+<table>
+<tr><th>Priority</th><th>Block</th><th>Templates</th><th>Pages Impacted</th><th>Rationale</th></tr>
+<tr><td><b>P0 (Critical)</b></td><td>hero (3 variants)</td><td>21 templates</td><td>81,753</td><td>Every page needs a hero. Develop first.</td></tr>
+<tr><td><b>P0</b></td><td>section-metadata</td><td>17 templates</td><td>~75,000</td><td>CSS-only, needed for all section styling.</td></tr>
+<tr><td><b>P0</b></td><td>teaser (promo bar)</td><td>13 templates</td><td>~70,000</td><td>Global header promo — universal.</td></tr>
+<tr><td><b>P1 (High)</b></td><td>cards</td><td>14 templates</td><td>~65,000</td><td>Most versatile block. 1 block, CSS variants.</td></tr>
+<tr><td><b>P1</b></td><td>columns</td><td>13 templates</td><td>~55,000</td><td>Core layout block. CSS grid-based.</td></tr>
+<tr><td><b>P1</b></td><td>form</td><td>5 templates</td><td>~24,000</td><td>18K+ form pages. Critical for lead gen.</td></tr>
+<tr><td><b>P1</b></td><td>sidebar-nav</td><td>8 templates</td><td>~22,000</td><td>Required for all sidebar templates.</td></tr>
+<tr><td><b>P2 (Medium)</b></td><td>accordion</td><td>4 templates</td><td>~7,000</td><td>Hub pages + PAS + order.</td></tr>
+<tr><td><b>P2</b></td><td>anchor-nav</td><td>5 templates</td><td>~7,000</td><td>Jump navigation for hub pages.</td></tr>
+<tr><td><b>P2</b></td><td>mondrian</td><td>3 templates</td><td>~17,000</td><td>High page count but complex. Parallel dev.</td></tr>
+<tr><td><b>P2</b></td><td>video</td><td>4 templates</td><td>~2,000</td><td>Brightcove integration. Medium complexity.</td></tr>
+<tr><td><b>P2</b></td><td>event-table</td><td>1 template</td><td>4,873</td><td>Events hub only but high visibility.</td></tr>
+<tr><td><b>P3 (Lower)</b></td><td>product-sub-nav</td><td>2 templates</td><td>~1,200</td><td>Product pages + verticals.</td></tr>
+<tr><td><b>P3</b></td><td>table, embed, quote</td><td>2-3 templates</td><td>~2,000</td><td>Simple/medium blocks. Quick wins.</td></tr>
+<tr><td><b>P3</b></td><td>carousel</td><td>2 templates</td><td>~2,700</td><td>Complex but limited templates.</td></tr>
+<tr><td><b>P4 (Defer)</b></td><td>chapter-toc, handbook-search, video-playlist</td><td>1 template</td><td>455</td><td>Handbook-only. Phase 2 candidate.</td></tr>
+<tr><td><b>P4</b></td><td>workflow-stepper, video-teaser, video-modal</td><td>1-2 templates</td><td>~146</td><td>Very limited scope. Phase 2 candidate.</td></tr>
+<tr><td><b>P4</b></td><td>csr-pillars, pipeline, highlights</td><td>1 template</td><td>~500</td><td>Corporate-only. Phase 2 candidate.</td></tr>
+</table>
+
+<h3>2.6 Key Insights Summary</h3>
+
+<div class="insight-green">
+<p><b>1. "80/20" Rule Applies:</b> 5 templates (Form, Category Deep, Promotion, Tech Resources, PAS) cover <b>82% of all pages</b>. Focusing development on these 5 templates first maximizes coverage.</p>
+</div>
+
+<div class="insight-green">
+<p><b>2. 10 blocks cover 90%+ of needs:</b> hero, cards, columns, teaser, form, sidebar-nav, section-metadata, accordion, anchor-nav, and mondrian appear across nearly all templates. Developing these 10 blocks first unlocks migration of 90%+ of pages.</p>
+</div>
+
+<div class="insight-yellow">
+<p><b>3. Legacy platform adds 1.5-2x complexity:</b> Templates T03, T09, T11, T12, T14, T18, T20, T21 include Legacy platform pages that use different DOM structures (parsys, cq-colctrl, wells). Each block needs platform-aware parsers in the import infrastructure.</p>
+</div>
+
+<div class="insight-yellow">
+<p><b>4. "Mixed" templates are the hardest:</b> T03 (16,758 pages) and T05 (18,521 pages) contain pages on BOTH Modern and Legacy platforms. These require dual-parser import infrastructure and represent the highest import complexity.</p>
+</div>
+
+<div class="insight-blue">
+<p><b>5. Template consolidation reduces EDS templates by 43%:</b> 21 AEM templates can map to ~12 EDS templates through strategic merging of similar structures. This reduces maintenance overhead and authoring complexity.</p>
+</div>
+
+<div class="insight-red">
+<p><b>6. 8 blocks can be deferred to Phase 2:</b> chapter-toc, handbook-search, video-playlist, workflow-stepper, video-teaser, video-modal, csr-pillars, and pipeline affect only ~1,100 pages combined. Deferring these saves ~20 dev days.</p>
+</div>
+
+</body>
+</html>

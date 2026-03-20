@@ -1,0 +1,71 @@
+<html>
+<head><title>Report 3: Coverage Report - Thermo Fisher AEM-to-EDS Migration</title></head>
+<body>
+<h1>Report 3: Coverage Report</h1>
+<p><b>Site:</b> thermofisher.com | <b>Date:</b> 2026-03-20</p>
+
+<h2>URL Processing Summary</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Metric</th><th>Count</th><th>%</th></tr>
+<tr><td><b>Total URLs in allurls.txt</b></td><td><b>81,753</b></td><td>100%</td></tr>
+<tr style="background:#f8f9fa"><td>Previously analyzed (tms-url-1 through tms-url-7)</td><td>61,253</td><td>74.9%</td></tr>
+<tr><td><b>New / undiscovered URLs</b></td><td><b>20,500</b></td><td><b>25.1%</b></td></tr>
+<tr style="background:#f8f9fa"><td>Duplicates across previous files</td><td>0</td><td>0%</td></tr>
+<tr><td>URLs in previous but NOT in allurls.txt</td><td>0</td><td>0%</td></tr>
+</table>
+
+<h2>New URL Breakdown by Section</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Section</th><th>New URLs</th><th>Status</th><th>Notes</th></tr>
+<tr><td>life-science (deep pages)</td><td>7,966</td><td>Mostly live</td><td>Lab equipment, protein biology, PCR, sequencing, cloning, cell culture + L2 sub-pages</td></tr>
+<tr style="background:#f8f9fa"><td>products-and-services (more promotions)</td><td>5,616</td><td>Mixed</td><td>4,380 additional promotions + summer campaigns + product types</td></tr>
+<tr><td>references (protocols, handbooks)</td><td>2,185</td><td>Live</td><td>Entirely NEW section: protocols, newsletters, molecular probes handbook, Gibco basics</td></tr>
+<tr style="background:#f8f9fa"><td>global/forms (additional)</td><td>1,504</td><td>Live</td><td>1,363 more form pages</td></tr>
+<tr><td>clinical (deep pages)</td><td>1,018</td><td>Live</td><td>Diagnostic testing, translational research, transplant solutions</td></tr>
+<tr style="background:#f8f9fa"><td>promo (standalone promo section)</td><td>372</td><td>Mixed</td><td>Chromatography consumables promos</td></tr>
+<tr><td>materials-science</td><td>341</td><td>Live</td><td>Entirely NEW section: learning center, battery research</td></tr>
+<tr style="background:#f8f9fa"><td>support</td><td>310</td><td>Live</td><td>Entirely NEW section: webinars, application notes, training</td></tr>
+<tr><td>communities-social</td><td>235</td><td>Mixed</td><td>Additional blog/community pages</td></tr>
+<tr style="background:#f8f9fa"><td>o (miscellaneous)</td><td>234</td><td>Unknown</td><td>Miscellaneous category</td></tr>
+<tr><td>promotions (standalone)</td><td>185</td><td>Mixed</td><td>Standalone promo section</td></tr>
+<tr style="background:#f8f9fa"><td>new-ideas</td><td>159</td><td>Live</td><td>Entirely NEW section: Life in the Lab magazine, blog content</td></tr>
+<tr><td>order</td><td>64</td><td>Live</td><td>Product ordering / shop-all pages</td></tr>
+<tr style="background:#f8f9fa"><td>semiconductors</td><td>57</td><td>Live</td><td>Entirely NEW section: semiconductor analysis solutions</td></tr>
+<tr><td>products-services (variant path)</td><td>46</td><td>Mixed</td><td>Alternate path variant</td></tr>
+<tr style="background:#f8f9fa"><td>Other (cloud, sustainable-design, step-beyond, etc.)</td><td>~308</td><td>Mixed</td><td>Various smaller sections</td></tr>
+</table>
+
+<h2>Page Analysis Coverage</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Metric</th><th>Count</th></tr>
+<tr><td>Representative pages analyzed (DOM deep-dive)</td><td>~75 pages</td></tr>
+<tr style="background:#f8f9fa"><td>Sections with live page analysis</td><td>28 distinct sections</td></tr>
+<tr><td>AEM Platforms identified</td><td>3 (Legacy, Modern, Corporate) + 1 (External/WordPress)</td></tr>
+<tr style="background:#f8f9fa"><td>Block types identified</td><td>35</td></tr>
+<tr><td>Total block variations cataloged</td><td>87</td></tr>
+</table>
+
+<h2>Exclusion Categories</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Category</th><th>Count</th><th>Recommendation</th></tr>
+<tr><td>Transactional pages (thank-you, cancel, survey)</td><td>~12,000</td><td>EXCLUDE from migration</td></tr>
+<tr style="background:#f8f9fa"><td>Form pages (global/forms/*)</td><td>~11,600</td><td>Template-based batch import</td></tr>
+<tr><td>Promotion pages (multiple promo sections)</td><td>~17,900</td><td>Template-based batch import</td></tr>
+<tr style="background:#f8f9fa"><td>Duplicate brand paths (brands1, brands2)</td><td>~1,066</td><td>EXCLUDE (exact duplicates of /brands/)</td></tr>
+<tr><td>Deprecated/404 pages</td><td>~8,000-12,000</td><td>Verify with bulk status check</td></tr>
+</table>
+
+<h2>Entirely New Sections Discovered (from allurls.txt)</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Section</th><th>URLs</th><th>Key Finding</th></tr>
+<tr><td>/references/</td><td>2,185</td><td>Protocols, handbooks, newsletters — introduces chapter-toc, handbook-search, video-playlist blocks</td></tr>
+<tr style="background:#f8f9fa"><td>/materials-science/</td><td>341</td><td>Learning center content — uses Modern platform</td></tr>
+<tr><td>/support/</td><td>310</td><td>Support hub — introduces support-hub, quick-actions-sidebar, chat-widget patterns</td></tr>
+<tr style="background:#f8f9fa"><td>/new-ideas/</td><td>159</td><td>Magazine/editorial content — introduces filmstrip carousel, post-list blog layout</td></tr>
+<tr><td>/semiconductors/</td><td>57</td><td>Semiconductor analysis — uses Modern platform with application-selector grid</td></tr>
+<tr style="background:#f8f9fa"><td>/sustainable-design/</td><td>12</td><td>Green design — introduces cmp-manualnavigation/cmp-autonavigation dual nav</td></tr>
+<tr><td>/cloud/</td><td>13</td><td>Cloud platform (redirects to /digital-solutions/) — workflow tab containers</td></tr>
+<tr style="background:#f8f9fa"><td>/order/</td><td>64</td><td>Product ordering — massive anchor-list TOC + product link directory</td></tr>
+</table>
+</body>
+</html>
