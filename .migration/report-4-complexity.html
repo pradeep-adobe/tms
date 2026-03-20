@@ -1,0 +1,87 @@
+<html>
+<head><title>Report 4: Complexity Distribution - Thermo Fisher AEM-to-EDS Migration</title></head>
+<body>
+<h1>Report 4: Complexity Distribution</h1>
+<p><b>Site:</b> thermofisher.com | <b>Date:</b> 2026-03-20 | <b>Total Blocks:</b> 35 | <b>Total Variations:</b> 87</p>
+
+<h2>Complexity Overview</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Complexity</th><th>Block Count</th><th>Variation Count</th><th>Est. Dev Days (each)</th><th>Total Est. Days</th></tr>
+<tr style="background:#e8f5e9"><td><b style="color:#28a745">SIMPLE</b></td><td>8</td><td>18</td><td>1-2 days</td><td>8-16 days</td></tr>
+<tr style="background:#fff8e1"><td><b style="color:#ff8f00">MEDIUM</b></td><td>19</td><td>47</td><td>2-5 days</td><td>38-95 days</td></tr>
+<tr style="background:#fce4ec"><td><b style="color:#dc3545">COMPLEX</b></td><td>8</td><td>22</td><td>4-8 days</td><td>32-64 days</td></tr>
+<tr style="background:#e3f2fd"><td><b>TOTAL</b></td><td><b>35</b></td><td><b>87</b></td><td>-</td><td><b>78-175 days</b></td></tr>
+</table>
+
+<h2>Simple Blocks (CSS-only, no or minimal JS)</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#28a745;color:white"><th>Block</th><th>Variants</th><th>Rationale</th></tr>
+<tr><td>anchor-nav</td><td>3</td><td>Static jump links — no interactive behavior</td></tr>
+<tr style="background:#f8f9fa"><td>resources-grid</td><td>1</td><td>Static 4-up icon+text grid — pure layout</td></tr>
+<tr><td>resources-list</td><td>1</td><td>Simple linked list — default content pattern</td></tr>
+<tr style="background:#f8f9fa"><td>section-metadata</td><td>8</td><td>CSS-only background/spacing styles on sections</td></tr>
+<tr><td>table</td><td>2</td><td>Standard HTML table styling</td></tr>
+<tr style="background:#f8f9fa"><td>quote</td><td>2</td><td>Simple blockquote/testimonial layout</td></tr>
+<tr><td>quick-menu</td><td>1</td><td>Static titled link list</td></tr>
+<tr style="background:#f8f9fa"><td>download-card / report-hub</td><td>2</td><td>Merged into cards — simple variant</td></tr>
+</table>
+
+<h2>Medium Blocks (light-moderate JS, &lt;150 lines)</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#ffc107"><th>Block</th><th>Variants</th><th>Rationale</th></tr>
+<tr><td>hero</td><td>7</td><td>Multiple visual variants but same core pattern; gradient/image handling</td></tr>
+<tr style="background:#f8f9fa"><td>cards</td><td>11</td><td>Grid layout + responsive breakpoints + optional image/overlay logic</td></tr>
+<tr><td>columns</td><td>7</td><td>Responsive column layouts with variant handling</td></tr>
+<tr style="background:#f8f9fa"><td>teaser</td><td>5</td><td>Image positioning + CTA rendering logic</td></tr>
+<tr><td>sidebar-nav</td><td>3</td><td>Auto-generation + expandable groups + active state</td></tr>
+<tr style="background:#f8f9fa"><td>video</td><td>4</td><td>Brightcove SDK integration + poster image handling</td></tr>
+<tr><td>accordion</td><td>2</td><td>Expand/collapse with ARIA accessibility</td></tr>
+<tr style="background:#f8f9fa"><td>tabs</td><td>3</td><td>Tab switching with content panels + ARIA</td></tr>
+<tr><td>embed</td><td>3</td><td>iframe/script injection + security handling</td></tr>
+<tr style="background:#f8f9fa"><td>highlights</td><td>1</td><td>Counter animation + responsive grid</td></tr>
+<tr><td>featured-grid</td><td>1</td><td>Asymmetric CSS grid layout</td></tr>
+<tr style="background:#f8f9fa"><td>pipeline</td><td>1</td><td>Step visualization + responsive reflow</td></tr>
+<tr><td>csr-pillars</td><td>1</td><td>Hover overlay animation</td></tr>
+<tr style="background:#f8f9fa"><td>blog-cards</td><td>2</td><td>Date formatting + responsive layout</td></tr>
+<tr><td>video-teaser</td><td>1</td><td>Play button overlay + duration badge + click handler</td></tr>
+<tr style="background:#f8f9fa"><td>video-modal</td><td>1</td><td>Modal open/close + video autoplay on open</td></tr>
+<tr><td>video-playlist</td><td>1</td><td>Playlist navigation + active video tracking</td></tr>
+<tr style="background:#f8f9fa"><td>chapter-toc</td><td>1</td><td>Chapter navigation + scroll-to + active tracking</td></tr>
+<tr><td>handbook-search</td><td>1</td><td>Search input + filtering logic</td></tr>
+<tr style="background:#f8f9fa"><td>support-hub</td><td>1</td><td>Categorized link rendering + collapsible sections</td></tr>
+</table>
+
+<h2>Complex Blocks (heavy JS, &gt;150 lines, custom behavior)</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#dc3545;color:white"><th>Block</th><th>Variants</th><th>Rationale</th></tr>
+<tr><td>form</td><td>4</td><td>Eloqua integration, multi-field validation, reCAPTCHA, conditional logic, XF embedding</td></tr>
+<tr style="background:#f8f9fa"><td>product-sub-nav</td><td>2</td><td>Sticky positioning, dropdown menus, auto-generation from hierarchy, active state, responsive collapse</td></tr>
+<tr><td>event-table</td><td>1</td><td>20+ checkbox filters, text search, dynamic row filtering, date formatting, pagination</td></tr>
+<tr style="background:#f8f9fa"><td>mondrian</td><td>4</td><td>Complex CSS grid with 4 layout variants, responsive breakpoints, dynamic slot filling</td></tr>
+<tr><td>carousel</td><td>2</td><td>Slide animation, touch/swipe, filmstrip variant, auto-advance, responsive sizing</td></tr>
+<tr style="background:#f8f9fa"><td>workflow-stepper</td><td>1</td><td>Multi-step state management, content switching, progress tracking, back/forward navigation</td></tr>
+</table>
+
+<h2>Effort Estimation by Migration Phase</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Phase</th><th>Scope</th><th>Pages</th><th>New Blocks Needed</th><th>Est. Block Dev Days</th></tr>
+<tr><td>Phase 1: Bioprocessing + EM</td><td>Modern platform, most consistent</td><td>~1,300</td><td>hero, cards, columns, resources-grid, video, anchor-nav (6 blocks)</td><td>15-25</td></tr>
+<tr style="background:#f8f9fa"><td>Phase 2: Industrial</td><td>Mixed platform, high volume</td><td>~5,976</td><td>+ sidebar-nav, table, mondrian, section-metadata (4 blocks)</td><td>12-20</td></tr>
+<tr><td>Phase 3: Life Science + Brands</td><td>Mixed platform, deep hierarchy</td><td>~11,900</td><td>+ product-sub-nav, featured-grid, workflow-stepper (3 blocks)</td><td>12-18</td></tr>
+<tr style="background:#f8f9fa"><td>Phase 4: Tech Resources + Forms + References</td><td>High volume templates</td><td>~20,400</td><td>+ form, form-complex, accordion, chapter-toc, handbook-search, video-playlist (6 blocks)</td><td>22-38</td></tr>
+<tr><td>Phase 5: Promotions + Services</td><td>Template-driven batch</td><td>~19,100</td><td>+ teaser (promo), embed (2 blocks)</td><td>5-9</td></tr>
+<tr style="background:#f8f9fa"><td>Phase 6: Clinical + Chemicals + Support + B2B</td><td>Mixed sections</td><td>~2,100</td><td>+ quick-menu, support-hub (2 blocks)</td><td>3-5</td></tr>
+<tr><td>Phase 7: Corporate + Events + Blog + Misc</td><td>Low priority / separate workstreams</td><td>~5,200</td><td>+ highlights, csr-pillars, event-table, carousel, blog-cards, video-teaser, video-modal (7 blocks)</td><td>19-34</td></tr>
+<tr style="background:#e3f2fd"><td colspan="3"><b>TOTAL</b></td><td><b>~30 blocks</b></td><td><b>88-149 days</b></td></tr>
+</table>
+
+<h2>Platform Complexity Factor</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+<tr style="background:#0066cc;color:white"><th>Platform</th><th>Est. Page Share</th><th>Parser Complexity</th><th>Import Effort Multiplier</th></tr>
+<tr><td>Modern AEM Core Components (B)</td><td>~50%</td><td>Low — clean semantic markup</td><td>1.0x (baseline)</td></tr>
+<tr style="background:#f8f9fa"><td>Legacy AEM Classic / Parsys (A)</td><td>~40%</td><td>High — deeply nested, 8+ column variants, wells, mondrian</td><td>1.5-2.0x</td></tr>
+<tr><td>Corporate TFC (C)</td><td>~5%</td><td>Medium — custom components</td><td>1.3x</td></tr>
+<tr style="background:#f8f9fa"><td>External (WordPress, SPAs) (D)</td><td>~5%</td><td>Variable</td><td>2.0x (separate tooling)</td></tr>
+</table>
+</body>
+</html>
