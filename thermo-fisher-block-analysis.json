@@ -1,0 +1,670 @@
+{
+  "analysisMetadata": {
+    "date": "2026-03-20",
+    "source": "thermofisher.com",
+    "pagesAnalyzed": 12,
+    "purpose": "Functional block documentation for EDS migration - comprehensive behavioral analysis"
+  },
+  "blocks": {
+    "event-table": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/events.html",
+      "pageTitle": "Events and Webinars | Thermo Fisher Scientific - US",
+      "description": "A filterable, searchable event listing table that displays upcoming events, webinars, conferences, and workshops. Uses a single-column table with full-width event card rows, each containing title, date/location, description, CTA, and thumbnail image.",
+      "behavior": {
+        "layout": "Single-column HTML table with one <td> per <tr>; each row is a full-width event card",
+        "rowCount": 18,
+        "totalRowsIncludingHeader": 19,
+        "cellsPerRow": 1,
+        "hasTheadRow": true,
+        "headerIsEmpty": true,
+        "hasPagination": false,
+        "sortable": false,
+        "hasLoadMore": false
+      },
+      "eventCardStructure": {
+        "elements": [
+          "h2 > a (event title as link)",
+          "h4 (date range pipe-separated from location)",
+          "p (description with inline 'Learn more' link)",
+          "img (event thumbnail, right-aligned)"
+        ],
+        "sampleTitle": "How AI Helps with Image Data Analysis in Life Sciences",
+        "sampleDateLocation": "December 4, 2025-April 1, 2026 | Global",
+        "sampleDescription": "Discover how AI in life sciences streamlines image data analysis. Learn advanced denoising, AI-assisted annotation, and 3D segmentation with Amira Software.",
+        "ctaLinksPerRow": 2,
+        "imagePerRow": 1,
+        "imageCount": 18,
+        "totalCTALinks": 36,
+        "h2TitleCount": 18,
+        "h4DateLocationCount": 18
+      },
+      "filters": {
+        "hasFiltersToggle": true,
+        "filtersToggleClassName": "filter-icon",
+        "filtersToggleText": "Filters",
+        "hasTextSearch": true,
+        "searchFieldClassName": "search-field",
+        "searchFieldParentClassName": "table-search",
+        "searchPlaceholder": "",
+        "filterGroups": [
+          {
+            "group": "Event Type",
+            "groupId": "fg0",
+            "options": ["Conference", "Roadshow_Tour", "Tradeshow", "Training_Course", "User_Meeting", "Virtual_Event", "Webinar", "Workshop", "Seminar"],
+            "count": 9,
+            "inputType": "checkbox",
+            "inputClassName": "cmp-form-options__field cmp-form-options__field--checkbox",
+            "parentClassName": "cmp-form-options"
+          },
+          {
+            "group": "Region",
+            "groupId": "fg1",
+            "options": ["United_States", "Global", "Europe"],
+            "count": 3,
+            "inputType": "checkbox"
+          },
+          {
+            "group": "Month",
+            "groupId": "fg2",
+            "options": ["January", "February", "March", "April", "May"],
+            "count": 5,
+            "inputType": "checkbox"
+          }
+        ],
+        "totalCheckboxes": 17
+      },
+      "containerClasses": {
+        "tableParent": "table-container",
+        "tableClass": "(no class on table element)",
+        "componentIdPrefix": "dt-pragma-datatable-ldj3gdi1"
+      },
+      "pageStructure": {
+        "h1": "Events and Webinars",
+        "introText": "Welcome to our Events and Webinars Hub. Easily search and register for upcoming events, webinars, and workshops. Find professional development opportunities, industry insights, and networking events.",
+        "disclaimerText": "For Research Use Only. Not for use in diagnostic procedures."
+      }
+    },
+
+    "mondrian": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/clinical.html",
+      "pageTitle": "Clinical | Molecular Diagnostics, Clinical Research, Translational Research",
+      "description": "A multi-slot promotional module using a Mondrian-style grid layout with large and small image tiles, CTA links, and optional inline navigation lists. Two primary variants detected: module-d and module-f.",
+      "variants": {
+        "module-d": {
+          "sourceUrl": "https://www.thermofisher.com/us/en/home/clinical.html",
+          "description": "Two-column layout: left side has a large hero image slot, right side stacks a small image tile above a navigation list",
+          "className": "mondrian-module mondrian-module-d clearfix",
+          "containerDimensions": {"width": 724, "height": 170},
+          "submodules": [
+            {
+              "position": "left",
+              "className": "mondrian-module-outer mondrian-submodule-left",
+              "width": 376,
+              "height": 170,
+              "hasImage": true,
+              "hasLink": true,
+              "hasOverlayText": true
+            },
+            {
+              "position": "right-top",
+              "className": "mondrian-module-inner",
+              "width": 174,
+              "height": 170,
+              "hasImage": true,
+              "hasLink": true,
+              "hasOverlayText": true
+            },
+            {
+              "position": "right-bottom",
+              "className": "mondrian-module-inner mondrian-module-list",
+              "width": 174,
+              "height": 170,
+              "hasImage": false,
+              "hasLink": true,
+              "isNavList": true,
+              "navItems": ["Cell & Gene Therapy", "Clinical Microbiology", "Diagnostic Development", "Diagnostic Testing"]
+            }
+          ]
+        },
+        "module-f": {
+          "sourceUrls": [
+            "https://www.thermofisher.com/us/en/home/clinical/diagnostic-testing.html",
+            "https://www.thermofisher.com/us/en/home/life-science/protein-biology.html"
+          ],
+          "description": "Mondrian module variant F - similar grid layout to module-d but with different proportions. Found on L2/L3 category pages alongside sidebar navigation.",
+          "detectedClasses": [
+            "mondrian",
+            "mondrian_cq",
+            "mondrian-module",
+            "mondrian-module-f",
+            "mondrian-module-outer",
+            "mondrian-submodule-left",
+            "mondrian-submodule-right",
+            "mondrian-module-list",
+            "mondrian-module-inner"
+          ]
+        }
+      },
+      "wrapperClasses": ["mondrian section", "mondrian_cq"],
+      "allDetectedClasses": [
+        "mondrian", "mondrian_cq", "mondrian-module", "mondrian-module-d", "mondrian-module-f",
+        "mondrian-module-outer", "mondrian-submodule-left", "mondrian-submodule-right",
+        "mondrian-module-inner", "mondrian-module-list"
+      ],
+      "pagesFoundOn": ["clinical.html", "diagnostic-testing.html", "protein-biology.html"]
+    },
+
+    "teaser": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/clinical.html",
+      "description": "A promotional teaser component with background image, text overlay, and CTA link. Used for hero banners, promotional spots, and dynamic personalized offers across the site.",
+      "className": "dm-dynamic-offer dm-img-bkg cmp-teaser",
+      "behavior": {
+        "hasImage": true,
+        "hasBackgroundImage": true,
+        "hasOverlayText": true,
+        "hasCTA": true,
+        "ctaLinksPerTeaser": 2,
+        "isDynamic": true,
+        "supportsPersonalization": true
+      },
+      "instances": 4,
+      "pagesFoundOn": ["clinical.html", "life-in-the-lab.html", "supply-center.html", "cloning.html", "support.html", "diagnostic-testing.html", "protein-biology.html"],
+      "notes": "dm-dynamic-offer class suggests server-side personalization via Adobe Target or similar. The cmp-teaser class is the AEM base component."
+    },
+
+    "category-cards": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/clinical.html",
+      "description": "Grid of category navigation cards arranged in 4-column rows. Each card features an h3 linked title and a descriptive paragraph. No images.",
+      "behavior": {
+        "cardsPerRow": 4,
+        "totalCards": 17,
+        "cardStructure": ["h3 > a (category title as link)", "p (description text)"],
+        "hasImages": false,
+        "hasSeparator": false
+      },
+      "sampleCards": [
+        {"title": "Anatomical Pathology", "url": "/us/en/website-overview/anatomical-pathology-information.html"},
+        {"title": "Biobanking", "url": "/us/en/home/clinical/biobanking"},
+        {"title": "Cancer Research", "url": "/us/en/home/life-science/cancer-research"},
+        {"title": "Cell & Gene Therapy", "url": "/us/en/home/clinical/cell-gene-therapy.html"}
+      ],
+      "sections": [
+        {"label": "Main categories", "count": 12, "rowsOf4": 3},
+        {"label": "Related areas", "count": 4, "hasSectionHeader": true, "headerText": "Related areas"}
+      ]
+    },
+
+    "carousel-rotator": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/about-us/partnering-licensing.html",
+      "pageTitle": "Partnering & Licensing",
+      "description": "A tabbed content rotator displaying key statistics and messaging. Uses clickable tab-like navigation labels (Global reach / Innovation / Mission) that cycle through content panels with animated transitions.",
+      "behavior": {
+        "tabLabels": ["Global reach", "Innovation", "Mission"],
+        "tabCount": 3,
+        "isAnimated": true,
+        "autoRotates": true,
+        "contentPanels": [
+          "We enable our customers to make the world Healthier, Cleaner and Safer.",
+          "We invest over $700M annually in R&D, and own over 4,000 patents.",
+          "We have extensive capability depth with over 4,600 scientists and engineers, 16,600 customer-facing employees..."
+        ],
+        "closingStatement": "Whether you have technologies to share, or are seeking new products and capabilities to enhance your portfolio, together we can."
+      },
+      "associatedBlocks": {
+        "sidebar-nav": {
+          "title": "Partnering & Licensing",
+          "links": ["Business Development & In-Licensing", "License Our Technology", "OEM & Commercial Supply"]
+        },
+        "info-cards": {
+          "count": 3,
+          "cardStructure": ["h3 (title as link)", "img (thumbnail)", "p (description)", "a (CTA link)"],
+          "cards": [
+            {"title": "Business Development & In-Licensing", "ctaText": "Submit an Opportunity"},
+            {"title": "License Our Technology", "ctaText": "Submit an inquiry"},
+            {"title": "OEM & Commercial Supply", "ctaText": "Submit an inquiry"}
+          ]
+        }
+      },
+      "pageStructure": {
+        "h1": "Partnering & Licensing",
+        "h3Count": 3,
+        "hrCount": 3,
+        "imgCount": 3
+      }
+    },
+
+    "filmstrip-carousel": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/new-ideas/life-in-the-lab.html",
+      "pageTitle": "Life in the Lab",
+      "description": "A horizontal scrolling filmstrip carousel showing content cards (blog posts, magazine issues) with left/right navigation arrows. Cards contain images, titles, and CTAs.",
+      "detectedClasses": [
+        "filmstrip",
+        "filmstrip-container",
+        "carousel",
+        "filmstrip-title",
+        "filmstrip-inner",
+        "filmstrip-control",
+        "sn-icons",
+        "sn-icons-lg"
+      ],
+      "behavior": {
+        "hasArrows": true,
+        "hasDots": false,
+        "scrollDirection": "horizontal",
+        "containsCards": true,
+        "arrowIconClasses": ["sn-icons", "sn-icons-lg"],
+        "controlClass": "filmstrip-control"
+      },
+      "pageStructure": {
+        "h1": "Life in the Lab",
+        "h2Titles": ["Navigate The Green Issue", "In case you missed it--past issues", "Scientainment", "Life in the Lab is your connection to other resources..."],
+        "h2Count": 4,
+        "h3Count": 9,
+        "imgCount": 38,
+        "hrCount": 2,
+        "iframeCount": 1
+      }
+    },
+
+    "csr-commitments": {
+      "sourceUrl": "https://corporate.thermofisher.com/us/en/index/corporate-social-responsibility.html",
+      "pageTitle": "Corporate Social Responsibility",
+      "description": "CSR commitment grid showing key responsibility areas as image cards with overlay titles, inner titles, and hover-activated arrow indicators.",
+      "detectedClasses": [
+        "csr-first-section", "csr-main-heading", "cmp-p-csr-commitment",
+        "csr-commitment-grid", "csr-commitment-image", "csr-commitment-title",
+        "csr-commitment-overlay", "csr-commitment-inner-title",
+        "csr-commitmen-arrow", "csr-commitment-container"
+      ],
+      "behavior": {
+        "layout": "Grid of commitment area cards",
+        "hasImages": true,
+        "hasOverlay": true,
+        "hasInnerTitle": true,
+        "hasArrowIndicator": true,
+        "hasHoverEffect": true
+      },
+      "section": {
+        "heading": "CSR COMMITMENT",
+        "position": "Below main heading, above highlights"
+      }
+    },
+
+    "highlights": {
+      "sourceUrl": "https://corporate.thermofisher.com/us/en/index/corporate-social-responsibility.html",
+      "description": "A statistics/highlights section displaying key numeric achievements with titles and descriptions. Uses a slider with dot navigation for paginating through multiple highlight items.",
+      "detectedClasses": [
+        "cmp-p-highlights", "section-highlight", "slider-wrapper",
+        "highlight-grid", "highlight-item", "highlight-title",
+        "desc-highlight", "highlight-dots"
+      ],
+      "behavior": {
+        "hasSlider": true,
+        "hasDots": true,
+        "dotNavClassName": "highlight-dots",
+        "itemStructure": {
+          "titleClass": "highlight-title",
+          "descriptionClass": "desc-highlight"
+        },
+        "layout": "Grid with dot pagination",
+        "wrapperClass": "slider-wrapper"
+      },
+      "section": {
+        "heading": "HIGHLIGHTS"
+      }
+    },
+
+    "quote": {
+      "sourceUrl": "https://corporate.thermofisher.com/us/en/index/corporate-social-responsibility.html",
+      "description": "A prominent blockquote section featuring a letter/message from CEO Marc Casper. Rendered as HTML blockquote elements with attribution.",
+      "behavior": {
+        "blockquoteCount": 2,
+        "hasAttribution": true,
+        "authorContext": "A note from Marc Casper (CEO)",
+        "sectionClass": "csr-letter-from-ceo"
+      }
+    },
+
+    "csr-report": {
+      "sourceUrl": "https://corporate.thermofisher.com/us/en/index/corporate-social-responsibility.html",
+      "description": "A reporting hub section for CSR/annual reports with background imagery and downloadable document links.",
+      "detectedClasses": [
+        "cmp-p-csr-report", "csr-report-section", "csr-report-bg",
+        "csr-report-documents", "csr-report-current"
+      ],
+      "behavior": {
+        "hasBackgroundImage": true,
+        "hasDocumentLinks": true,
+        "isDownloadable": true,
+        "sectionHeading": "Reporting hub"
+      }
+    },
+
+    "chapter-toc": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook.html",
+      "pageTitle": "The Molecular Probes Handbook",
+      "description": "A table of contents structure for a multi-chapter handbook/reference guide. Features a dedicated search box, collapsible sidebar navigation with plus/minus icons, and chapter listings organized by parts separated by horizontal rules.",
+      "behavior": {
+        "hasSearch": true,
+        "searchSectionHeading": "Search The Molecular Probes Handbook",
+        "hasSidebar": true,
+        "sidebarClassName": "sidebar",
+        "tocHeading": "Table of Contents",
+        "chapterOrganization": "Parts with sub-chapters, separated by <hr> elements",
+        "hrCount": 7,
+        "h2Count": 3,
+        "h3Count": 16,
+        "expandCollapseIcons": ["icon-plus"]
+      },
+      "sections": [
+        "Search The Molecular Probes Handbook",
+        "Table of Contents",
+        "Resources"
+      ]
+    },
+
+    "video-playlist": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/references/gibco-cell-culture-basics.html",
+      "pageTitle": "Gibco Cell Culture Basics",
+      "description": "A video player with adjacent playlist panel. Features a primary Brightcove video.js player on the left and a scrollable list of video thumbnails on the right for playlist navigation.",
+      "detectedClasses": [
+        "video-container", "video-playlist-right", "video-player-wrapper",
+        "video-js", "vjs-video-poster-container", "vjs-video-poster",
+        "vjs-modal-dialog", "vjs-modal-dialog-description",
+        "vjs-modal-dialog-content", "vjs-icon-placeholder", "vjs-slider-bar"
+      ],
+      "behavior": {
+        "playerType": "Brightcove (video.js based)",
+        "playerIdPrefix": "bc-player-hmATFP49Og",
+        "hasPlaylist": true,
+        "playlistPosition": "right",
+        "playlistClass": "video-playlist-right",
+        "videoCount": 2,
+        "iframeCount": 2,
+        "hasModalDialog": true,
+        "hasPosterImage": true,
+        "hasSliderBar": true,
+        "hasProgressBar": true
+      },
+      "pageStructure": {
+        "h1": "Gibco Cell Culture Basics",
+        "h2Count": 18,
+        "h3Count": 2,
+        "imgCount": 38,
+        "tableCount": 1,
+        "h2Titles": [
+          "Cell culture basics featured resources",
+          "Cell culture basics videos",
+          "Cell culture basics topics, tips, and tricks",
+          "Cell culture introduction",
+          "Aseptic techniques and safety in cell culture",
+          "Cell culture contamination",
+          "Cell lines, culture types, & cell morphology",
+          "Cell culture environment"
+        ]
+      }
+    },
+
+    "video-teaser-modal": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/products-and-services/supply-center.html",
+      "pageTitle": "Supply Center",
+      "description": "A video teaser component with a modal (lightbox) player. The teaser displays a thumbnail or preview, and clicking opens a modal overlay containing the full Brightcove video player.",
+      "detectedClasses": [
+        "cmp-p-videoplayer", "modal", "modal-video",
+        "modal-header", "modal-body", "m--teaser",
+        "cmp-ctaitem__icon", "icon-24-arrow-right-mono"
+      ],
+      "behavior": {
+        "hasModal": true,
+        "modalStructure": {
+          "wrapperClass": "modal modal-video",
+          "headerClass": "modal-header",
+          "bodyClass": "modal-body"
+        },
+        "playerType": "Brightcove (video.js based)",
+        "playerIdPrefix": "bc-player-xiCf2fKMT",
+        "teaserClass": "m--teaser",
+        "hasArrowIcon": true,
+        "clickToOpenModal": true,
+        "iframeCount": 1
+      },
+      "pageStructure": {
+        "h1": "Convenience is important. Sustainability is critical.",
+        "h2Count": 12,
+        "h3Count": 4,
+        "imgCount": 27,
+        "h2Titles": [
+          "Link accounts",
+          "Don't have an account?",
+          "Supply Center Success Stories",
+          "Resources",
+          "Reduce hassle and your lab's environmental impact"
+        ]
+      }
+    },
+
+    "workflow-stepper": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/life-science/cloning.html",
+      "pageTitle": "Molecular Cloning Essentials",
+      "description": "A tabbed workflow stepper component showing sequential steps in a process (e.g., molecular cloning workflow). Each step tab reveals step-specific content below with products and resources. Supports 5 steps with first/next/last tab states.",
+      "detectedClasses": [
+        "tabworkflowcontainer", "tabbable", "tabs-workflow",
+        "workflow-5steps", "nav-workflow", "first-tab", "next-tab", "last-tab"
+      ],
+      "behavior": {
+        "containerClass": "tabworkflowcontainer tabbable",
+        "tabNavClass": "nav-workflow",
+        "workflowVariant": "workflow-5steps",
+        "stepCount": 5,
+        "stepClasses": {
+          "first": "first-tab",
+          "middle": "next-tab",
+          "last": "last-tab"
+        },
+        "hasActiveState": true,
+        "isTabbed": true,
+        "contentRevealsOnTabClick": true
+      },
+      "pageStructure": {
+        "h1": "Molecular Cloning Essentials",
+        "h2Titles": [
+          "Innovative products for the molecular cloning workflow",
+          "Molecular cloning workflow",
+          "Featured resources for molecular cloning",
+          "Resources and support"
+        ],
+        "h3Count": 78,
+        "imgCount": 108,
+        "tableCount": 1,
+        "videoCount": 2,
+        "notes": "Very content-rich page with 78 h3 headings (one per product/topic within workflow steps) and 108 images"
+      }
+    },
+
+    "sidebar-nav-v3": {
+      "sourceUrls": [
+        "https://www.thermofisher.com/us/en/home/life-science/cloning.html",
+        "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook.html",
+        "https://www.thermofisher.com/us/en/home/clinical/diagnostic-testing.html",
+        "https://www.thermofisher.com/us/en/home/life-science/protein-biology.html"
+      ],
+      "description": "A collapsible left-sidebar navigation component with expandable/collapsible category sections. Uses plus/minus icons to indicate expand/collapse state. Found on legacy-template L2/L3 category pages.",
+      "detectedClasses": ["sidebar", "item-icon", "icon-plus", "icon-minus", "nav-list-header-icon"],
+      "behavior": {
+        "isCollapsible": true,
+        "hasIcons": true,
+        "expandIcon": "icon-plus",
+        "collapseIcon": "icon-minus",
+        "hasHeaderIcon": true,
+        "headerIconClass": "nav-list-header-icon",
+        "position": "left sidebar"
+      },
+      "frequency": 4
+    },
+
+    "quick-menu": {
+      "description": "Quick navigation links found in the global site header utility bar. Provides quick access to Order Status and Quick Order. Present on all thermofisher.com pages.",
+      "detectedClasses": ["quick-menu", "order-status", "quick-order"],
+      "behavior": {
+        "isGlobal": true,
+        "alwaysVisible": true,
+        "links": [
+          {"label": "Order Status", "url": "/store/orders/solu"},
+          {"label": "Quick Order", "url": "/store/v2/quick-order"}
+        ]
+      },
+      "frequency": "All pages",
+      "specificPageContext": {
+        "diagnosticTestingPage": {
+          "url": "https://www.thermofisher.com/us/en/home/clinical/diagnostic-testing.html",
+          "pageBlocks": ["mondrian (module-f)", "sidebar-nav-v3"],
+          "h1": "Diagnostic Testing",
+          "h2Titles": ["Prevail with diagnostic testing for your routine clinical lab"]
+        }
+      }
+    },
+
+    "support-hub": {
+      "sourceUrl": "https://www.thermofisher.com/us/en/home/support.html",
+      "pageTitle": "Help and Support",
+      "description": "A support hub landing page organized into major support categories. Features accordion expand/collapse sections, contact modal dialogs, category cards with Material Design icons, and organized support topic grids.",
+      "detectedClasses": [
+        "cmp-accordion__icon", "modal", "modal-body",
+        "material-design-icon", "message-processing-icon",
+        "material-design-icon__svg"
+      ],
+      "behavior": {
+        "hasAccordion": true,
+        "accordionIconClass": "cmp-accordion__icon",
+        "hasModal": true,
+        "hasMaterialDesignIcons": true,
+        "hasChatIcon": true,
+        "chatIconClass": "message-processing-icon"
+      },
+      "categories": [
+        {"title": "Order help", "type": "h2"},
+        {"title": "Contact us", "type": "h2"},
+        {"title": "eSolutions", "type": "h2"},
+        {"title": "Product support", "type": "h2"},
+        {"title": "Technical information", "type": "h2"},
+        {"title": "Training & education", "type": "h2"}
+      ],
+      "pageStructure": {
+        "h1": "Help and Support",
+        "h2Count": 6,
+        "h3Count": 4,
+        "imgCount": 16,
+        "hrCount": 2,
+        "iframeCount": 1
+      }
+    },
+
+    "social-share": {
+      "sourceUrls": [
+        "https://corporate.thermofisher.com/us/en/index/corporate-social-responsibility.html"
+      ],
+      "description": "Social sharing/social media links found in the footer area of corporate.thermofisher.com pages. Different from the main site footer.",
+      "detectedClasses": ["footer-social-link", "csr-footer", "footer-grid"],
+      "behavior": {
+        "isFooterBased": true,
+        "hasGrid": true
+      }
+    }
+  },
+
+  "globalComponents": {
+    "header": {
+      "description": "Global site header with promotional thin banner, Thermo Fisher logo, SearchBar v2023 with autocomplete, and utility navigation",
+      "elements": [
+        {"name": "Promotional thin banner", "behavior": "Rotating promotional offers with CTA link, clickable"},
+        {"name": "Logo", "link": "/us/en/home.html", "image": "Thermo Fisher Scientific Logo"},
+        {"name": "Search bar", "version": "SearchBar v2023", "hasAutocomplete": true, "hasFocusAreas": true, "provider": "Endeca-backed"},
+        {"name": "Utility navigation", "items": ["Order Status", "Quick Order", "Sign in", "Cart"]}
+      ]
+    },
+    "footer": {
+      "description": "Global site footer with 5-column link groups, legal bar, cookie consent, and country selector",
+      "columns": [
+        {"title": "Ordering", "links": ["Order Status", "Order Help", "Quick Order", "Supply Center", "eProcurement"]},
+        {"title": "Support", "links": ["Help and Support", "Contact Us", "Technical Support Centers", "Documents and Certificates", "Report a Site Issue"]},
+        {"title": "Resources", "links": ["Learning Centers", "Promotions", "Events and Webinars", "Social Media"]},
+        {"title": "About Thermo Fisher", "links": ["About Us", "Careers", "Investors", "News", "Social Responsibility", "Trademarks", "Consumer Health Data Privacy Policy", "Policies and Notices"]},
+        {"title": "Our Portfolio", "links": ["Thermo Scientific", "Applied Biosystems", "Invitrogen", "Gibco", "Ion Torrent", "Fisher Scientific", "Unity Lab Services", "Patheon", "PPD"]}
+      ],
+      "legalBar": ["Terms & Conditions", "Privacy Notice", "Price & Freight Policy", "Cookie Preferences"],
+      "copyright": "2006-2026 Thermo Fisher Scientific Inc. All rights reserved.",
+      "hasCountrySelector": true,
+      "countryDefault": "United States"
+    },
+    "cookie-consent": {
+      "description": "Cookie consent banner with three options",
+      "options": ["Manage Settings", "Accept All", "Reject All"]
+    },
+    "breadcrumb": {
+      "description": "Simple breadcrumb trail from Home to current page using > separator",
+      "className": "cmp-breadcrumb__list"
+    },
+    "feedback-button": {
+      "description": "Floating feedback button at bottom-right powered by Kampyle/Medallia",
+      "provider": "Kampyle (Medallia)",
+      "position": "fixed, bottom-right"
+    },
+    "accessibility-menu": {
+      "description": "Quick accessibility menu that appears at top of page with 4 options",
+      "options": [
+        "Skip to main content",
+        "Enable accessibility for visually impaired",
+        "Open the accessibility menu",
+        "Open the accessible navigation menu"
+      ]
+    },
+    "landscape-banner-popup": {
+      "description": "Slide-up promotional banner popup at bottom of page with close button and CTA",
+      "className": "landscape-banner-button",
+      "hasCloseButton": true,
+      "hasCTA": true
+    }
+  },
+
+  "blockInventorySummary": {
+    "totalBlocksIdentified": 18,
+    "blocksByPage": {
+      "events.html": ["event-table", "event-filters (text search + 3 checkbox filter groups)"],
+      "clinical.html": ["mondrian (module-d)", "teaser (cmp-teaser, 4 instances)", "category-cards (17 cards in 4-col grid)"],
+      "partnering-licensing.html": ["carousel-rotator (3 tabs: Global reach/Innovation/Mission)", "info-cards (3 cards with CTA)"],
+      "life-in-the-lab.html": ["filmstrip-carousel (horizontal scroll with arrows)"],
+      "corporate-social-responsibility.html": ["csr-commitments (grid with overlays)", "highlights (slider with dots)", "quote (blockquotes x2)", "csr-report (downloadable documents)", "social-share (footer links)"],
+      "molecular-probes-the-handbook.html": ["chapter-toc (searchable, 7 HR separators, 16 h3 chapters)", "sidebar-nav-v3 (collapsible)"],
+      "gibco-cell-culture-basics.html": ["video-playlist (Brightcove with right-side playlist panel)", "table (1 table)", "social-share"],
+      "supply-center.html": ["video-teaser-modal (click-to-open Brightcove modal)"],
+      "cloning.html": ["workflow-stepper (5-step tabbed workflow)", "sidebar-nav-v3"],
+      "diagnostic-testing.html": ["mondrian (module-f)", "sidebar-nav-v3"],
+      "support.html": ["support-hub (accordion + modal + Material Design icons, 6 categories)"],
+      "protein-biology.html": ["mondrian (module-f)", "sidebar-nav-v3"]
+    },
+    "sharedBlocks": {
+      "sidebar-nav-v3": {"foundOn": ["handbook", "cloning", "diagnostic-testing", "protein-biology"], "frequency": 4},
+      "mondrian": {"foundOn": ["clinical", "diagnostic-testing", "protein-biology"], "frequency": 3, "variants": ["module-d", "module-f"]},
+      "teaser (cmp-teaser)": {"foundOn": ["clinical", "life-in-the-lab", "supply-center", "cloning", "support", "diagnostic-testing", "protein-biology"], "frequency": 7},
+      "quick-menu": {"foundOn": "All thermofisher.com pages (global header)", "frequency": "universal"},
+      "social-share": {"foundOn": ["corporate-social-responsibility", "gibco-cell-culture-basics"], "frequency": 2}
+    }
+  },
+
+  "technologyStack": {
+    "cms": "Adobe Experience Manager (AEM)",
+    "templateTypes": {
+      "modern": {"prefix": "cmp-p-", "wrapper": "cmp-p-page", "grid": "aem-GridColumn", "examples": ["bioprocessing", "supply-center", "support"]},
+      "legacy": {"prefix": "cq-", "layout": "parsys-based column controls", "examples": ["clinical", "diagnostic-testing", "protein-biology", "cloning"]}
+    },
+    "videoPlayer": "Brightcove (video.js based, player IDs prefixed bc-player-)",
+    "search": "SearchBar v2023 with Endeca backend, focus areas, category selectors",
+    "analytics": "Adobe Analytics (digitalData layer)",
+    "personalization": "Dynamic offers (dm-dynamic-offer) suggesting Adobe Target or similar",
+    "feedback": "Kampyle/Medallia",
+    "accessibility": "Custom accessibility overlay menu",
+    "cookies": "TrustArc/OneTrust cookie consent (3 options: Manage/Accept/Reject)",
+    "jquery": "jQuery with jQuery Migrate 3.4.1",
+    "corporateSite": "corporate.thermofisher.com uses distinct AEM components with csr-* prefixed classes"
+  }
+}
